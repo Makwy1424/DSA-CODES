@@ -1,0 +1,24 @@
+Arrays=collection of smae data elements>
+
+int A[5]; //InitialiZation
+
+[_0_1__2__3__4]===In stack main;
+
+
+All array are declared in stack.
+
+
+code to print++++
+
+int main(){
+int A[5];
+for(int i=0;i<5;i++){
+cin>>a[i];
+cout<<a[i];
+}
+return 0;
+}
+
+That is for now!
+
+4:37 PM 8/15/2021

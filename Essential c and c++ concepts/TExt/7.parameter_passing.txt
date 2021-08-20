@@ -1,0 +1,64 @@
+12:32 PM 8/17/2021
+
+Parameter passing++++++
+--------------------------
+a.By value(Any change in formal parameters not reflected in actual parameters).
+b.by adress
+c.by reference
+
+
+a>::::::::::Example by value_____:::::::::
+void swap(int a, int b)
+{
+    int temp = a;
+    a = b;
+    b = temp;
+}
+int main()
+{
+    int a, b;
+    scanf("%d", &a);
+    scanf("%d", &b);
+    swap(a, b);
+    printf("%d %d", a, b); //The value of a and b is not changed.
+    return 0;
+}
+
+b>Instance of call by adress
+
+
+void swap(int *x, int *y)
+{
+    int temp = *x;
+    *x = *y;
+    *y = temp;
+}
+int main()
+{
+    int a, b;
+    scanf("%d %d", &a, &b);
+    swap(&a, &b);
+    printf("a = %d, b = %d\n", a, b);
+
+    return 0;
+}
+
+c>Call by references in c++
+
+void swap(int &x, int &y)
+{
+    int temp;
+    temp = x;
+    x = y;
+    y = temp;
+}
+int main()
+{
+    int a, b;
+    cin >> a >> b;
+    swap(a, b);
+    cout << a << " " << b << endl;
+    return 0;
+}
+//Machine code is monolithic and source code is procedural.
+

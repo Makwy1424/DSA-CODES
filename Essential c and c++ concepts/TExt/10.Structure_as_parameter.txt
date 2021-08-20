@@ -1,0 +1,93 @@
+2:14 PM 8/17/2021
+
+structure as parametre+++++
+-------------------------
+For call by value we write the code as:::::
+
+struct rectangle
+{
+    int length;
+    int breadth;
+};
+int area(struct rectangle r)
+{
+    //Separate value is created
+    return r.length * r.breadth;
+}
+int main()
+{
+    struct rectangle r = {10, 34};
+    printf("%d", area(r));
+    return 0;
+}
+
+For call by reference::::::
+-------------------------------
+If we modify the set of code it is also appreciated in this case.
+struct rectangle
+{
+    int length;
+    int breadth;
+};
+int area(struct rectangle &r1)
+{
+    return r1.length * r1.breadth;
+}
+int main()
+{
+    struct rectangle r;
+    cin >> r.length;
+    cin >> r.breadth;
+    cout << area(r);
+    return 0;
+}
+
+
+For call by adress:::::::::::::::::::::
+---------------------------------------
+The code to change the length of the structure.
+
+struct rectangle
+{
+    int length;
+    int breadth;
+};
+void changelength(struct rectangle *r, int d)
+{
+    r->length = d;
+}
+int main()
+{
+    struct rectangle r;
+    scanf("%d %d", &r.length, &r.breadth);
+    printf("\n Put the new length\n");
+    int n;
+    scanf("%d", &n);
+    changelength(&r, n); //call by adress w.r.t structure
+    printf("%d %d", r.length, r.breadth);
+    return 0;
+}
+
+For array in structure:::::::::::
+---------------------------------
+When a array is inside a structure even if we don't pass the array by call by adress it is changed when the structure is passed by value Does not affect the main thing.
+
+code++++++
+---------
+struct test
+{
+    int a[5];
+    int n;
+};
+void func(struct test b)
+{
+    b.a[0] = 9;
+}
+int main()
+{
+    struct test r = {{1, 2, 3, 4, 5}, 42};
+    func(r);
+    printf("%d", r.a[0]);
+    return 0;
+}
+output:1

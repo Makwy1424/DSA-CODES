@@ -1,0 +1,37 @@
+9:12 PM 8/19/2021
+
+============STRUCTURE AS FUNCTION=========
+-----------------------------------------------
+This code represent a style of obeject orientation.And lead to object orientation.
+
+=========================================
+#include <bits/stdc++.h>
+using namespace std;
+#define ll long long
+struct rectangle
+{
+    int length;
+    int breadth;
+};
+void initialise(struct rectangle *r, int l, int b)
+{
+    r->length = l;
+    r->breadth = b;
+}
+int area(struct rectangle r)
+{
+    return r.length * r.breadth;
+}
+void changlength(struct rectangle *r, int l)
+{
+    r->length = l;
+}
+int main()
+{
+    struct rectangle r;
+    initialise(&r, 10, 5);
+    area(r);
+    changlength(&r, 20);
+
+    return 0;
+}

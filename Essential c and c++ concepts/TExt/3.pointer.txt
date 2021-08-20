@@ -1,0 +1,21 @@
+10:50 AM 8/16/2021
+
+Pointers are used to acess the value by the taking adress. 
+
+1.The program doesn't directly acess the heap memory it is limited to main and stack memory.By using pointers we use the heap memory.
+
+2.It can acess any file present in the computer and inter and keyboard and manymore.
+
+3. Parameter passing in funtion.
+
+
+
+To acess heap memory in c we use the malloc function present in <stdlib.h> .
+in c=====
+int *p;
+p=(int*)malloc(5*sizeof(int));
+
+in c++=====
+int *p;
+p=new int[5];
+

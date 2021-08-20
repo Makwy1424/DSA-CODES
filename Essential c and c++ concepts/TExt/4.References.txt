@@ -1,0 +1,14 @@
+7:44 AM 8/17/2021
+
+References::::
+Reference is the alias name given to a variable or some other type.
+
+int a = 10;
+int &r = a;
+
+In the above code & sign represent the alias ya another name of a.Means the same memory they contain. It just a another name of that variable.
+ 
+cout << a << endl; //Thyis gives the value of a
+cout << r; 
+
+The above gives same output

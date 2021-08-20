@@ -1,0 +1,53 @@
+Structure=======
+----------------
+
+collection of data members of similar type or dissmilar types under one name>
+
+It is used for user defined data types;
+
+=======Defining structure=======
+---------------------------------------
+
+When a object is not defined by a same variable for multiple times may be, then we used a structure to define it.
+
+ex:-
+For a rectangle.
+
+code+++
+
+struct rectangle{
+int length;           //Declaration
+int breadth;
+};
+
+This declaration is declared outside main for simplicity to use the structure.
+
+Also complex nubers are defined by using a structure.
+
+We also include a array in a structure and pointers also. It will be.....
+
+code:::::
+struct student{
+int roll;
+char name[29];
+char dept[90];
+char adress[87];
+}
+
+
+The size of the structure is equal to the size of the sum of the indivisual data type varibles.
+
+Ex:In struct student, if a variable is declared then it takes only memory ,if a variable is declared then it consumes =4+29+90+87=210 byte.
+
+
+Array structures++++++++=======
+------------------------
+init:::struct student ten_boys[50];
+decla::struct student ten_boys[50]={{1,"smruti","math","bbsr"},{2,"rana","chem","dgd"},{........}};
+Assesing::::
+ten_boys[0].name=Smruti
+ten_boys[1].roll=2
+ten_boys[1].dept=chem
+
+
+

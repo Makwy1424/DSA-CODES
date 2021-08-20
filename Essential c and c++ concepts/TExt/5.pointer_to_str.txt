@@ -1,0 +1,40 @@
+7:55 AM 8/17/2021
+
+
+POinter _to_structure=======
+----------------------------
+struct rectangle
+{
+    int length;
+    int breadth;
+};
+
+int main()
+{
+ struct rectangle r = {10, 4};
+    struct rectangle *p = &r;
+    r.length = 15;
+    (*p).length = 20;  //Acessing the members by pointer
+    p->length = 30;
+
+    printf("%d\n", r.length);
+return 0;
+}
+
+Dynamic allocation=====
+-----------------------
+It will be in heap.
+There is no existing variable .Ther is a dynamic object is just created in heap  and pointing to the pointer.
+
+int main()
+{
+    struct rectangle *p;
+    p = (struct rectangle *)malloc(sizeof(struct rectangle));
+    p->length = 10;
+    p->breadth = 243;
+    printf("%d\n", p->length);
+    printf("%d", p->breadth);
+    return 0;
+}
+
+In this code,By using the malloc funtion we can use the heap memory.

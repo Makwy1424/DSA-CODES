@@ -1,0 +1,61 @@
+1:48 PM 8/17/2021
+
+Array as parameter++++++
+------------------------
+
+When a array is pass into a funtion is Then this is automatic by adress by value>
+
+Code>+++++++++++++++++++
+--------------------------
+void fun(int a[], int n) //we can also use *a=a                               [].As it works as a                                pointer here.
+{
+    int i;
+    for (i = 0; i < n; i++)
+    {
+        printf("%d ", a[i]);
+    }
+}
+int main()
+{
+    int A[5] = {0, 1, 2, 3, 4};
+    fun(A, 5);
+    return 0;
+}
+As the function fun takes the array by adress so we also modify the value of the adress.
+
+code++++++++++++++++++
+----------------------
+void fun(int a[], int n)
+{
+    a[0]=23;  //It is updated in main array.
+    
+}
+int main()
+{
+    int a[5] = {0, 1, 2, 3, 4};
+    fun(a, 5);
+    return 0;
+}
+
+the above funtion modify the original array.
+
+THE FUNTIONRETURN A ARRAY+++++++++
+----------------------------------
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#define ll long long
+int *fun(int n)   // This * gives a pointer in return .
+{
+    int *p;
+    p = (int *)malloc(n * sizeof(int));
+    return p;
+}
+int main()
+{
+    int *A;
+    A = fun(5);
+
+    return 0;
+}

@@ -1,0 +1,35 @@
+11:50 AM 8/17/2021
+
+FUNTION=====
+-------------
+Group of related data instructions which performs some specific task is called Funtions.
+modules ,procedures>also called.
+
+parametr passing:-
+--------------------
+1>Pass by value(c,c++)
+2>pass by adress(c,c++)
+3>pass by reference(c++)
+
+
+Writing all codes in a single funtion is called monolithic programming>
+
+Writting all codes by dividing into modules is called procedural programming/modular programming>
+
+code+++++
+int add(int m, int n)  //Prototype .m and n are formal parameter.
+{
+    return m + n;
+}
+int main()
+{
+    int a, b;
+    scanf("%d %d", &a, &b);
+    int y = add(a, b);  //Here a and b actual parameter.
+    printf("%d", y);
+    return 0;
+}
+
+MEMORY VISUALISATION++++++
+---------------------------
+First a section of memory in stack is consumed by main.When it call the add funtion then the the memory of the add funtion is created and when it return its value then the section of the memory will be deleted.
